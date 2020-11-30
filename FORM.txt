@@ -1,0 +1,74 @@
+# FORM-INPUT
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta></meta>
+	<script type="text/javascript">
+			function checkSelected(){
+				var gender=document.getElementById("form1").elements["gender"];
+				var age=document.getElementById("form1").elements["age"];
+				//alert(gender.length);
+				var selectedIndex1=-1;
+				for(i=0;i<gender.length;i++){
+					if(gender[i].checked) {selectedIndex1=i; break;}
+				}
+				var selectedIndex2=-1;
+				for(i=0;i<age.length;i++){
+					if(age[i].checked) {selectedIndex2=i; break;}
+				}
+				alert("Anda memilih: "+gender[selectedIndex1].value.toUpperCase()+" dengan usia: "+age[selectedIndex2].getAttribute("data-custom"));
+			}
+		</script>
+	<style></style>
+	<base></base>
+	<link></link>
+</head>
+<body bgcolor="orange">
+	<center>
+	<h1>STARK INDUSTRIES</h1></center>
+	<hr>
+  <center>
+    <h2>BIODATA</h2></center>
+
+    nama:<br>
+    <input type="placeholder" name="">
+    <br>
+    tanggal lahir:<br>
+    <input type="date" name="">
+    <br>
+
+   <form id="form1">
+<p>Please select your gender:</p>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br>  
+
+<p>Please select your age:</p>
+  <input type="radio" name="age" value="30" data-custom="0-30"> 0 - 30<br>
+  <input type="radio" name="age" value="60" data-custom="31-60"> 31 - 60<br>
+  <input type="radio" name="age" value="100" data-custom="61-100"> 61 - 100<br>  
+</form>
+<br>
+    email:<br>
+    <input type="email" name="">
+    <br>
+    your CV: <br>
+    <input type="file" name="">
+    <br>
+    tujuan:<br>
+    <input type="" name="">
+    <br>
+    setuju
+    <br>
+    <input type="checkbox" name="">
+    <div>
+    <center>
+    	<h1>click here if you done</h1>
+	   <input type="button" value="Check Selected" onclick="checkSelected()">
+    </center>
+    </div>
+
+</body>
+</html>
